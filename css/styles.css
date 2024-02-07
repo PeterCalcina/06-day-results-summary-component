@@ -218,31 +218,85 @@ body {
 }
 
 
-@media (width <= 475px) {
+@media (376px <= width <= 475px) {
+  body {
+    place-items: start;
+  }
+
   .card-results-summary {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40% 60%;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   .card-results-summary .card-results {
-    padding: 10px 2rem 20px 2rem;
+    height: 280px;
+    padding: 20px 2rem;
     border-radius: 0 0 20px 20px;
   }
 
   .card-results-summary .card-results .result-number {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
   }
 
   .card-results-summary .card-results .result-number .result {
     font-size: 2.5rem;
   }
 
-  .card-results-summary .card-results .result-number .text-result {
+  .card-results-summary .card-results .text-result {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .card-results-summary .card-summary {
+    justify-content: space-evenly;
+    height: 350px;
+    padding: 0 2rem;
+  }
+
+  .card-results-summary .card-summary .title {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .card-results-summary .card-summary .summary-item {
+    font-size: 14px;
+    padding: 14px 10px;
+  }
+
+  .card-results-summary .card-summary .btn-continue {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (width <= 376px) {
+  .card-results-summary {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 55%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-results-summary .card-results {
+    padding: 20px 2rem;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .card-results-summary .card-results .result-number {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-results-summary .card-results .result-number .result {
     font-size: 2.5rem;
+  }
+
+  .card-results-summary .card-results .text-result {
+    width: 70%;
   }
 
   .card-results-summary .card-summary {
