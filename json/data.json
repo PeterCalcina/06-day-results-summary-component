@@ -1,0 +1,32 @@
+{
+  "result": 76,
+  "total": 100,
+  "status": "Great",
+  "textResult": "You scored higher than 65% of the people who have taken these tests.",
+  "summary": [
+    {
+      "name": "Reaction",
+      "icon": "images/icon-reaction.svg",
+      "category": "Reaction",
+      "score": 80
+    },
+    {
+      "name": "Memory",
+      "icon": "images/icon-memory.svg",
+      "category": "Memory",
+      "score": 92
+    },
+    {
+      "name": "Verbal",
+      "icon": "images/icon-verbal.svg",
+      "category": "Verbal",
+      "score": 61
+    },
+    {
+      "name": "Visual",
+      "icon": "images/icon-visual.svg",
+      "category": "Visual",
+      "score": 72
+    }
+  ]
+}

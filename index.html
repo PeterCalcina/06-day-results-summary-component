@@ -21,20 +21,41 @@
 </head>
 
 <body>
+    <script>
+        fetch('json/data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.querySelector('.result').textContent = data.result;
+                document.querySelector('.total').textContent = 'of ' + data.total;
+                document.querySelector('.status').textContent = data.status;
+                document.querySelector('.text-result').textContent = data.textResult;
+
+                var summaryItems = document.querySelectorAll('.summary-item');
+                for (var i = 0; i < summaryItems.length; i++) {
+                    var item = summaryItems[i];
+                    var dataItem = data.summary[i];
+                    item.querySelector(dataItem.name.toLowerCasse()).src = dataItem.name;
+                    item.querySelector('img').src = dataItem.icon;
+                    item.querySelector('.result').innerHTML = '<strong>' + dataItem.score + '</strong><span>/ 100</span>';
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    </script>
+
 
     <div class="card-results-summary">
         <div class="card-results">
             <span class="title">Your Result</span>
             <div class="result-number">
-                <span class="result">76</span>
-                <span class="total">of 100</span>
+                <span class="result"></span>
+                <span class="total"></span>
             </div>
 
             <div class="status-result-text">
-                <span class="status">Great</span>
+                <span class="status"></span>
                 <p class="text-result">
-                    You scored higher than 65% of the people who
-                    have taken these tests.
                 </p>
             </div>
         </div>
@@ -43,45 +64,33 @@
             <h2 class="title">Summary</h2>
             <div class="summary-item">
                 <div class="reaction">
-                    <img src="images/icon-reaction.svg" alt="Icon reaction">
-                    Reaction
+                    <img src="#" alt="Icon reaction">
                 </div>
                 <div class="result">
-                    <strong>80</strong>
-                    <span>/ 100</span>
                 </div>
             </div>
 
             <div class="summary-item">
                 <div class="memory">
-                    <img src="images/icon-memory.svg" alt="Icon memory">
-                    Memory
+                    <img src="#" alt="Icon reaction">
                 </div>
                 <div class="result">
-                    <strong>92</strong>
-                    <span>/ 100</span>
                 </div>
             </div>
 
             <div class="summary-item">
                 <div class="verbal">
-                    <img src="images/icon-verbal.svg" alt="Icon verbal">
-                    Verbal
+                    <img src="#" alt="Icon reaction">
                 </div>
                 <div class="result">
-                    <strong>61</strong>
-                    <span>/ 100</span>
                 </div>
             </div>
 
             <div class="summary-item">
                 <div class="visual">
-                    <img src="images/icon-visual.svg" alt="Icon visual">
-                    Visual
+                    <img src="#" alt="Icon reaction">
                 </div>
                 <div class="result">
-                    <strong>72</strong>
-                    <span>/ 100</span>
                 </div>
             </div>
 
