@@ -12,7 +12,6 @@ Tabla de contenidos:
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
 
-
 /* ----- Variables ----- */
 :root {
   /* Colores primarios */
@@ -45,6 +44,10 @@ Tabla de contenidos:
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: grid;
@@ -224,14 +227,14 @@ body {
   }
 
   .card-results-summary {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .card-results-summary .card-results {
-    height: 280px;
     padding: 20px 2rem;
     border-radius: 0 0 20px 20px;
   }
@@ -252,12 +255,11 @@ body {
 
   .card-results-summary .card-summary {
     justify-content: space-evenly;
-    height: 350px;
-    padding: 0 2rem;
+    padding-top: 5px;
+    padding-bottom: 0;
   }
 
   .card-results-summary .card-summary .title {
-    margin-top: 10px;
     font-size: 16px;
   }
 
