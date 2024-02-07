@@ -145,7 +145,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 20px);
+  width: 100%;
   font-size: 12px;
   padding: 12px 10px;
   border-radius: 5px;

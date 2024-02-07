@@ -31,12 +31,13 @@
                 document.querySelector('.text-result').textContent = data.textResult;
 
                 var summaryItems = document.querySelectorAll('.summary-item');
+                
                 for (var i = 0; i < summaryItems.length; i++) {
                     var item = summaryItems[i];
                     var dataItem = data.summary[i];
-                    item.querySelector(dataItem.name.toLowerCasse()).src = dataItem.name;
-                    item.querySelector('img').src = dataItem.icon;
-                    item.querySelector('.result').innerHTML = '<strong>' + dataItem.score + '</strong><span>/ 100</span>';
+                    item.querySelector('.icon-container .icon-summary').src = dataItem.icon;
+                    item.querySelector('.icon-container .summary-name').textContent = dataItem.name;
+                    item.querySelector('.result').innerHTML = '<strong>' + dataItem.score + '</strong><span> / 100</span>';
                 }
             })
             .catch((error) => {
@@ -63,32 +64,36 @@
         <div class="card-summary">
             <h2 class="title">Summary</h2>
             <div class="summary-item">
-                <div class="reaction">
-                    <img src="#" alt="Icon reaction">
+                <div class="reaction icon-container">
+                    <img  class="icon-summary" src="" alt="Icon reaction">
+                    <span class="summary-name"></span>
                 </div>
                 <div class="result">
                 </div>
             </div>
 
             <div class="summary-item">
-                <div class="memory">
-                    <img src="#" alt="Icon reaction">
+                <div class="memory icon-container">
+                    <img  class="icon-summary" src="" alt="Icon memory">
+                    <span class="summary-name"></span>
                 </div>
                 <div class="result">
                 </div>
             </div>
 
             <div class="summary-item">
-                <div class="verbal">
-                    <img src="#" alt="Icon reaction">
+                <div class="verbal icon-container">
+                    <img  class="icon-summary" src="" alt="Icon verbal">
+                    <span class="summary-name"></span>
                 </div>
                 <div class="result">
                 </div>
             </div>
 
             <div class="summary-item">
-                <div class="visual">
-                    <img src="#" alt="Icon reaction">
+                <div class="visual icon-container">
+                    <img  class="icon-summary" src="" alt="Icon visual">
+                    <span class="summary-name"></span>
                 </div>
                 <div class="result">
                 </div>
