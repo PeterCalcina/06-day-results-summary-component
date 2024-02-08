@@ -223,6 +223,11 @@ body {
 
 
 @media (376px <= width <= 475px) {
+
+  html, body {
+    height: 100%;
+  }
+
   .card-results-summary {
     display: flex;
     flex-direction: column;
